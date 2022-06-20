@@ -1,0 +1,49 @@
+
+<div>
+  <ol *ngIf="playbackData['showQueue']">
+    <li *ngFor="let song of this.playbackDataService.playbackData['queuedSongNames']">{{song}}</li>
+  </ol>
+</div>
+
+<iframe [src]="this.playbackDataService.playbackData['currSongSrc']" width="100%" 
+height="250" width="250"frameBorder="0" 
+allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+<div>
+    <span>
+        <button type="button" (click)='prevSong()'>Prev</button>
+      </span>
+
+    <span *ngIf="playbackData['isPlaying']; else notPlaying">
+        <button type="button" (click)='playPause()'>Play</button>
+      </span>
+      
+      <ng-template #notPlaying>
+        <button type="button" (click)='playPause()'>Pause</button>
+      </ng-template>
+
+      <span>
+        <button type="button" (click)='nextSong()'>Next</button>
+      </span>
+
+      <span *ngIf="!playbackData['showQueue']; else dontShowQueue">
+        <button type="button">Show Queue</button>
+      </span>
+      
+      <ng-template #dontShowQueue>
+        <button type="button" >Hide Queue</button>
+
+      </ng-template>
+      
+      <span>
+        <button type="button" (click)='decVolume()'>-</button>
+      </span>
+      <span class="slidecontainer">
+        <input type="range" min="1" max="100" [value]="playbackData['volume']" class="slider" id="myRange" >
+      </span>
+
+      <span>
+        <button type="button" (click)='incVolume()'>+</button>
+      </span>
+
+</div>

@@ -1,0 +1,18 @@
+#handTrackerContainer{
+    position:fixed;
+    bottom:0;
+    right: 0;
+
+}
+
+#playback{
+    position:fixed;
+    bottom:0;
+    left: 0;
+
+}
+
+#loginContainer{
+    position:absolute;
+    right: 0;
+}

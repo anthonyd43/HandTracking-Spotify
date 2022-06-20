@@ -1,0 +1,40 @@
+
+<!-- add clickable event here -->
+<h5 class="row">
+    <div class="col-sm"></div>
+    <div class="col-sm"></div>
+
+    <div class="col-sm">
+        <p>#</p>
+    </div>
+    <div class="col-sm">
+        <p>Track Name</p>
+    </div>
+    <div class="col-sm">
+        <p>Artist</p>
+    </div>
+    <div class="col-sm">
+        <p>Album</p>
+    </div>
+</h5>
+<div class="row" *ngFor="let track of tracks; let i = index">
+    <div class="col-sm">
+        <button (click)="playTrack(track)">Play</button>
+    </div>
+    <div class="col-sm">
+        <button (click)="addToQueue(track)">Add To Queue</button>
+    </div>
+    <div class="col-sm">
+        <p>{{i+1}}</p>
+    </div>
+    <div class="col-sm">
+        <p>{{track.name}}</p>
+    </div>
+    <div class="col-sm">
+        <p>{{track.artist}}</p>
+    </div>
+    <div class="col-sm">
+        <p>{{track.album}}</p>
+    </div>
+</div>
+

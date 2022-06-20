@@ -1,0 +1,23 @@
+<div style="padding-left: 2rem;">
+    <div id="loginContainer" class="row" style="padding: 0.5rem; padding-left: 1rem; padding-right: 1rem;">
+        <div class = "column" style="padding: .5rem;">
+            <a *ngIf="name == ''" style="padding-right: 0.5rem;" class="btn btn-success" role="button" href="http://localhost:8888/login" (click)="getUserInfo()">Log in</a>
+            <h5 *ngIf="name != ''" style="padding-right: 0.5rem;">{{name}}</h5>
+        </div>
+    </div>
+
+</div>
+<div style="padding-left: 2rem;">
+    <app-playlist (notifyHomeTrackPlaying)="onNotifyClicked($event)" (notifyAddQueue)="onNotifyAddQueue($event)"></app-playlist>
+</div>
+
+<div id="playback">
+    <app-playback></app-playback>
+</div>
+
+
+<div id="handTrackerContainer" style="padding: .5rem; padding-left: 1rem; padding-right: 1rem;">
+    <app-gesture style="filter: invert(1) hue-rotate(180deg);" (onGesture)="gestEvent($event)"></app-gesture>
+</div>
+
+

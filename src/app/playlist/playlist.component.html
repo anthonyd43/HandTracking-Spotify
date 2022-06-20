@@ -1,0 +1,30 @@
+<div class="row" style="padding: .5rem;" >
+    <!-- <div class="column">Your Playlists</div> -->
+    <div class="column">    
+        <h3 style="padding-left: 1rem; padding-right: 1rem;">Your Playlists:</h3>
+    </div>
+    <div class="column" style="padding-left: 0.5rem;" *ngFor="let playlist of playlistArray" >
+        <button class="btn btn-link" (click)="listTracks(playlist)">{{playlist.name}}</button>
+    </div>
+</div>
+<!-- <div class="row">
+    <div class="column">
+
+    </div>
+</div> -->
+<div style="background-color: #e7e7e7; padding: 1rem;" class="row">
+    <div class="w3-card" style="width: 100%;">
+        <div class="row">
+            <div class="col col-lg-2">
+                <img [src]="curPlaylistImage" alt="playlist image" style="width:100%; filter: invert(1) hue-rotate(180deg);">
+            </div>
+            <div class="col-md-auto">
+                <p style="padding-top: 0.5rem;">Playlist:</p>
+                <h3 style="padding-bottom: 0.5rem ">{{curPlaylistName}}</h3>
+            </div>
+            <div class="col">
+                <app-tracklist [tracks]="tracks" (notifyTrackPlaying)= "onNotifyClicked($event)" (notifyAddQueue)="onNotifyAddQueue($event)"></app-tracklist>
+            </div>
+        </div>
+    </div>
+</div>
