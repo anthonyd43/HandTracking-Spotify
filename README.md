@@ -1,6 +1,6 @@
 # Team:
-Anthony Diep
-Brandon Nguyen
+- Anthony Diep
+- Brandon Nguyen
 
 # AtAlternativeInteractionSolution
 
