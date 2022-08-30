@@ -12,7 +12,7 @@ The original repo is privated
 # Process
 This project was a realization of how many libraries and API's are out there that can be used together 
 to develop amazing applications. We used a library called Handtrack.js that allows us to read realtime
-hand detections from your webcam. This allowed us to call certain functions from the Spotify's WebPlayer
+hand detections from your webcam. Handtrack.js was used to call certain functions from the Spotify's WebPlayer
 using different hand gestures. 
 
 We created a simple Spotify playlist viewer using Angular, CSS, and HTML. Users will be able to chose any 
